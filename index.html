@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <h1 id="title" class="text-center">
+            Форма опроса клиентов hxdcml16-shop
+        </h1>
+        <p id="description" class="description text-center">
+            Спасибо, что нашли время помочь улучшить наш магазин
+        </p>
+    </header>
+    <form id="survey-form">
+        <div class="form-group">
+            <label for="name" id="name-label">Имя</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Введите свое имя" required>
+        </div>
+        <div class="form-group">
+            <label for="email" id="email-label">Email</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="Введите свой email" required>
+        </div>
+        <div class="form-group">
+            <label for="number" id="number-label">Возраст (не обязательно)</label>
+            <input type="number" id="number" name="age" class="form-control" min="10" max="100"
+                   placeholder="Введите свой возраст">
+        </div>
+        <div class="form-group">
+            <p>Откуда вы узнали о нас?</p>
+            <select id="dropdown" name="findOut" class="form-control" required>
+                <option value disabled selected>Выберите наиболее подходящий вариант</option>
+                <option value="advertising">Реклама</option>
+                <option value="friends">От друзей</option>
+                <option value="socialNetworks">Социальные сети</option>
+                <option value="other">Другое</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <p>Порекомендуете ли вы нас друзьям?</p>
+            <label>
+                <input name="user-recommend" value="definitely" type="radio" class="input-radio" checked>
+                Обязательно
+            </label>
+            <label>
+                <input name="user-recommend" value="maybe" type="radio" class="input-radio" checked>
+                Возможно
+            </label>
+            <label>
+                <input name="user-recommend" value="not-sure" type="radio" class="input-radio" checked>
+                Не уверен
+            </label>
+        </div>
+        <div class="form-group">
+            <p>
+                Что понравилось больше всего?
+            </p>
+            <select name="mostLiked" id="most-like" class="form-control" required>
+                <option disabled selected value>Выберите один из пунктов списка</option>
+                <option value="service">Обслуживание</option>
+                <option value="choice">Большой выбор товаров</option>
+                <option value="stocks">Акции и партнерская программа</option>
+                <option value="price">Цены и скидки</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <p>
+                Что нам стоит улучшить?
+                <span class="clue">(Вы можете выбрать несколько вариантов)</span>
+            </p>
+            <label>
+                <input type="checkbox" value="design" name="prefer" class="input-checkbox">
+                Дизайн</label>
+            <label>
+                <input type="checkbox" value="management" name="prefer" class="input-checkbox">
+                Менеджмент</label>
+            <label>
+                <input type="checkbox" value="delivery" name="prefer" class="input-checkbox">
+                Доставку</label>
+            <label>
+                <input type="checkbox" value="size-grid" name="prefer" class="input-checkbox">
+                Сетку размеров</label>
+        </div>
+        <div class="form-group">
+            <p>Остались какие то пожелание?</p>
+            <textarea
+                    id="comments"
+                    class="input-textarea"
+                    name="comment"
+                    placeholder="Оставьте ваш коментарий здесь..."
+            ></textarea>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" id="submit" class="submit-button">
+                Отправить
+            </button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
